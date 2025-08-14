@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="./login.css" />
+    <link
+      rel="shortcut icon"
+      href="./img/beverage-removebg-preview.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="#" class="logo">
+          <img src="./img/dessert 1.png" alt="logo" />
+          <h2>Coffee Shop</h2>
+        </a>
+      </nav>
+    </header>
+
+    <!-- popup form -->
+    <div class="form-popup">
+      <div class="form-box">
+        <div class="form-details">
+          <h2>Welcome Back</h2>
+          <p>
+            Please log in using your personal <span>information</span> to stay
+            connected with <span> us.</span>
+          </p>
+        </div>
+        <div class="form-content">
+          <h2>LOGIN</h2>
+          <form id="loginForm">
+            <div class="input-field">
+              <input type="text" required />
+              <label>Email</label>
+            </div>
+            <div class="input-field">
+              <input type="password" required />
+              <label>Password</label>
+            </div>
+            <a href="#" class="forgot-pass">Forgot Password?</a>
+            <button type="submit">Login</button>
+          </form>
+          <div class="bottom-link">
+            Don't have an account?
+            <a href="./sign.html">Signup</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript redirect -->
+    <script>
+      const loginForm = document.getElementById("loginForm");
+
+      loginForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // Redirect to main.html
+        window.location.href = "main.html";
+      });
+    </script>
+  </body>
+</html>

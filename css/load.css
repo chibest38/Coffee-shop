@@ -1,0 +1,216 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+  z-index: -1;
+}
+
+/* ========== Section Styles ========== */
+section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  color: white;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.text {
+  padding: 1rem;
+  gap: 10px;
+  display: flex;
+}
+
+.text p {
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: lowercase;
+  justify-content: space-between;
+}
+
+.text h4 {
+  font-weight: 800;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.text h4 {
+  animation-delay: 0.9s;
+}
+
+/* ========== Animations ========== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.welcome h1,
+.welcome-title h3,
+.welcome-title p,
+.buttons button {
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.welcome h1 {
+  animation-delay: 0.3s;
+}
+
+.welcome-title h3 {
+  animation-delay: 0.6s;
+}
+
+.welcome-title p {
+  animation-delay: 0.9s;
+}
+
+.buttons button {
+  animation-delay: 1.2s;
+}
+
+/* ========== Heading ========== */
+.section-title {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  width: 80px;
+  height: 5px;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+  background: #ffa500;
+}
+
+/* ========== Welcome Content ========== */
+.welcome-title h3 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.welcome-title p {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0 1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ========== Button ========== */
+.buttons {
+  margin-top: 2rem;
+}
+
+.buttons button {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  color: white;
+  background-color: #ffa500;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.buttons button:hover {
+  background-color: #ff8000;
+  transform: scale(7);
+}
+
+/* ========== Mobile Media Query ========== */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .welcome-title h3 {
+    font-size: 1.5rem;
+  }
+
+  .welcome-title p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .buttons button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  section {
+    padding: 1rem;
+  }
+
+  .text {
+    flex-direction: column;
+    font-size: larger;
+    font-weight: 900;
+  }
+
+  /* @media (max-width: 480px  */
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .welcome-title h3 {
+    font-size: 1.2rem;
+  }
+
+  .welcome-title p {
+    font-size: 0.9rem;
+  }
+
+  .buttons button {
+    font-size: 0.95rem;
+  }
+
+  .text p {
+    font-size: large;
+    flex-direction: column;
+  }
+}
